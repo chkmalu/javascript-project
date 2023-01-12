@@ -16,9 +16,9 @@ pipeline {
             steps {
                 echo 'Deploying image on prod'
                 script{
-                    docker-run = 'docker run -d --name jsapp -p 80:80 chikamalu/jsapp:1.0'
+                    dockerRun = 'docker run -d --name jsapp -p 80:80 chikamalu/jsapp:1.0'
                     sshagent(['Appserver-ssh-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no jsapp@52.207.189.206 ${docker-run}"
+                        sh "ssh -o StrictHostKeyChecking=no jsapp@52.207.189.206 ${dockerRun}"
                     }
                 }
             }
