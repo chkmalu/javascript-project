@@ -1,3 +1,5 @@
+library identifier: 'git@github.com:chkmalu/jenkins-shared-library.git', retriever: modernSCM([$class: 'GitSCMSource', credentialsId: 'jenkins-keyid', remote: 'git@github.com:chkmalu/jenkins-shared-library.git'])
+
 pipeline {
     agent any
 
@@ -10,6 +12,9 @@ pipeline {
         stage('Build image') {
             steps {
                 echo 'Building image'
+                script{
+                    build('chikamalu/jsapp:1.1')
+                }
             }
         }
         stage('Deploy image') {
