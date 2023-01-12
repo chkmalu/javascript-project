@@ -18,7 +18,7 @@ pipeline {
                 script{
                     sshagent(['Appserver-ssh-key']) {
                         sh 'ssh -o StrictHostKeyChecking=no ubuntu@52.207.189.206'
-                        sh 'sudo docker run -d --name jsapp -p 80:80 jsapp:1.0'
+                        sh 'docker run -d --name jsapp -p 80:80 jsapp:1.0'
 }
                 }
             }
