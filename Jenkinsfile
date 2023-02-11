@@ -23,7 +23,7 @@ pipeline {
         }
         tage('Deploying App') {
             steps {
-                echo 'Hello World'
+                echo 'Hello Worldw'
             }
         }
     }
