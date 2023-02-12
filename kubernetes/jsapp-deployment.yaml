@@ -1,12 +1,12 @@
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: ${IMAGE_NAME}-dev
-# ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${IMAGE_NAME}-dev
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namspace: ${IMAGE_NAME}-dev
+  namespace: ${IMAGE_NAME}-dev
   name: ${IMAGE_NAME}-deployment
   labels:
     app: ${IMAGE_NAME}
@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namspace: ${IMAGE_NAME}-dev
+  namespace: ${IMAGE_NAME}-dev
   name: ${IMAGE_NAME}-service
 spec:
   type: LoadBalancer
@@ -42,7 +42,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namspace: ${IMAGE_NAME}-dev
+  namespace: ${IMAGE_NAME}-dev
   name: ${IMAGE_NAME}-ingress
   annotations:
     kubernetes.io/ingress.class: alb
