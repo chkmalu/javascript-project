@@ -1,8 +1,8 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: ${IMAGE_NAME}-dev
----
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: ${IMAGE_NAME}-dev
+# ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
