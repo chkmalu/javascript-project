@@ -4,7 +4,6 @@ pipeline {
         IMAGE_REPO = 'chikamalu/'
         IMAGE_NAME = 'jsapp'
         IMAGE_TAG = "1.0-${BUILD_NUMBER}"
-
         KUBECTL = '/var/jenkins_home/bin/kubectl'
     }
 
