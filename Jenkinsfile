@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deploying App') {
             steps {
-                sh "envsubst < kubernetes/jsapp-deployment.yaml | ${KUBENETES} apply -f -"
+                sh "envsubst < kubernetes/jsapp-deployment.yaml | ${KUBECTL} apply -f -"
             }
         }
     }
