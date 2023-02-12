@@ -23,7 +23,7 @@ pipeline {
         }
         tage('Deploying App') {
             steps {
-                echo 'Hello Worldw'
+                sh "envsubst < kubernetes/jsapp-deployment.yaml | ${KUBENETES} apply -f -"
             }
         }
     }
