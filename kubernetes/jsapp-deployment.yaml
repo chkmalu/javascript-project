@@ -2,8 +2,6 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: ${IMAGE_NAME}-dev
-  labels:
-    name: ${IMAGE_NAME}-dev
 ---
 apiVersion: apps/v1
 kind: Deployment
